@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+	<title>Home Page</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+</head>
+<body>
+	{% csrf_token %}
+
+	<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
+		<div class='navbar-brand' href='#'>Company Portal</a></div>
+
+	<ul class="nav navbar-nav">
+		<li><a href="/home">HOME</a></li>
+		<li><a href="/hr">HR MANAGER</a></li>
+		<li><a href="/employee">EMPLOYEE</a></li>
+	</ul>
+	<ul class="nav navbar-nav navbar-right">
+		<li><a href="/signup">Signup</a></li>
+		<li><a href="/accounts/login"> HR Login</a></li>
+		<li><a href="/accounts/logout">Logout</a></li>
+	</ul>
+	</div>
+</div>
+
+
+</body>
+
+{% block body_block %}
+<center>
+<link rel="stylesheet" type="text/css" href="{% static "/css/homestyle.css" %}">
+<img src="{% static "/image/fire.jpg" %}">
+
+<h2>Welcome</h2>
+
+<p>(This is main home page)</p>
+</center>
+{% endblock %}
+</html>

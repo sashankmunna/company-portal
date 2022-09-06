@@ -1,0 +1,30 @@
+{% extends 'app2/home.html' %}
+
+
+{% block body_block %}
+<center>
+		<a href="/viewemp"><button>View employee Data</button></a>
+	<a href="/viewnews"><button>View Latest News</button></a>
+	<a href="/viewcal"><button>Upcoming Holidays</button></a>
+	
+	<table border=7;>
+<head>
+	<h2>Upcoming Holidays</h2>
+	<thead>
+		<th>Date</th>
+		<th>Occation</th>
+
+	</thead>
+</head>
+<body>
+	<tr>
+		{% for s in ca %}
+			<td>{{s.Date}}</td>
+			<td>{{s.Occation}}</td>
+			
+		</tr>
+	{% endfor %}
+	</table>
+</body>
+</center>
+{% endblock %}

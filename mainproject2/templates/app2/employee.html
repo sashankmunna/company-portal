@@ -1,0 +1,17 @@
+{% extends 'app2/home.html' %}
+{% csrf_token %}
+
+{% block body_block %}
+
+<center>
+	<h1>Welcome to Employee Page</h1>
+	
+	<a href="/viewemp"><button>View employee Data</button></a>
+	<a href="/viewnews"><button>View Latest News</button></a>
+	<a href="/viewcal"><button>Upcoming Holidays</button></a>
+</center>
+
+
+
+
+{% endblock %}

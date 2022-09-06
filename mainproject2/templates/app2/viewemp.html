@@ -1,0 +1,41 @@
+{% extends 'app2/home.html' %}
+{% csrf_token %}
+
+{% block body_block %}
+<center>
+		<a href="/viewemp"><button>View employee Data</button></a>
+	<a href="/viewnews"><button>View Latest News</button></a>
+	<a href="/viewcal"><button>Upcoming Holidays</button></a>
+	
+<table border=7;>
+<head>
+	<title>Emp Information</title>
+	<h1>Employee Information</h1>
+	<thead>
+			<th>EmpName</th>
+			<th>EmpID</th>
+			<th>Designation</th>
+			<th>SalaryPackage</th>
+			<th>Department</th>
+			<th>Experience</th>
+		</thead>
+
+</head>
+<body>
+		{% for s in e %}
+		<tr>
+			<td>{{s.EmpName}}</td>
+			<td>{{s.EmpID}}</td>
+			<td>{{s.Designation}}</td>
+			<td>{{s.SalaryPackage}}</td>
+			<td>{{s.Department}}</td>
+			<td>{{s.Experience}}</td>
+			
+
+		</tr>
+		{% endfor %}
+
+</body>
+</table>
+</center>
+{% endblock %}

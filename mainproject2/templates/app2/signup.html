@@ -1,0 +1,14 @@
+{% extends 'app2/home.html' %}
+
+{% block body_block %}
+
+<center>
+	<h2>New Registration Form</h2>
+	<form method=POST>
+		{% csrf_token %}
+		{{form.as_p}}
+		<button>Sign Up</button>
+	</form>
+</center>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'app2/home.html' %}
+{% csrf_token %}
+
+
+{% block body_block %}
+<center>
+<form method="POST">
+		{{form.as_p}}
+		{%csrf_token%}
+
+		<a href="/vct"><button>submit</button></a>
+
+	</form>
+</center>
+{% endblock %}

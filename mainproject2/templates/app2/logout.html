@@ -1,0 +1,12 @@
+{% extends 'app2/home.html' %}
+{% csrf_token %}
+
+{% block body_block %}
+<center>
+	<h2>Thanks For Visiting</h2>
+
+	<a href="/accounts/login"><button>Login Again</button></a>
+
+</center>
+
+{% endblock %}

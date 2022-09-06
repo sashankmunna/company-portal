@@ -1,0 +1,25 @@
+{% extends 'app2/home.html' %}
+{% csrf_token %}
+
+
+{% block body_block %}
+<center>
+	<a href="/empform"><button>Add Employee</button></a>
+<a href="/emptable"><button>View Employee Data</button></a>
+<a href="/mainnews"><button>Latest News</button></a>
+<a href="/vct"><button>Calender</button></a>
+
+<body>
+	<table border=7;>
+	{% for s in vct %}
+		<tr>
+			<td>{{s.Date}}</td>
+			<td>{{s.Occation}}</td>
+			
+		</tr>
+	{% endfor %}
+	</table>
+	<a href="/calform"><button>Add Holidays</button></a>
+</body>
+</center>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'app2/home.html' %}
+
+
+{% block body_block %}
+{% csrf_token %}
+<center>
+		<a href="/viewemp"><button>View employee Data</button></a>
+	<a href="/viewnews"><button>View Latest News</button></a>
+	<a href="/viewcal"><button>Upcoming Holidays</button></a>
+	
+	<head>
+		<table border=7;>
+
+		<thead>
+			<th>Latest News About This Company</th>
+
+		</thead>
+	</head>
+<body>
+	{% for s in ne %}
+		<tr>
+			<td>{{s.occation}}</td>
+			
+		</tr>
+	{% endfor %}
+	</table>
+</body>
+</table>
+</center>
+{% endblock %}
+		

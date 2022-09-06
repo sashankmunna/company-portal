@@ -1,0 +1,45 @@
+{% extends 'app2/home.html' %}
+{% csrf_token %}
+
+{% block body_block %}
+<center>
+	<a href="/empform"><button>Add Employee</button></a>
+<a href="/emptable"><button>View Employee Data</button></a>
+<a href="/mainnews"><button>Latest News</button></a>
+<a href="/vct"><button>Calender</button></a>
+
+<table border=7;>
+<head>
+	<title>Emp Information</title>
+	<h1>Employee Information</h1>
+	<thead>
+			<th>EmpName</th>
+			<th>EmpID</th>
+			<th>Designation</th>
+			<th>SalaryPackage</th>
+			<th>Department</th>
+			<th>Experience</th>
+			<th>Edit</th>
+		</thead>
+
+</head>
+<body>
+		{% for s in e %}
+		<tr>
+			<td>{{s.EmpName}}</td>
+			<td>{{s.EmpID}}</td>
+			<td>{{s.Designation}}</td>
+			<td>{{s.SalaryPackage}}</td>
+			<td>{{s.Department}}</td>
+			<td>{{s.Experience}}</td>
+			<td><a href="/update/{{s.id}}"><button>Update</button></a> <a href="/delete/{{s.id}}"><button>Delete</button></a></td>
+			
+
+		</tr>
+		{% endfor %}
+
+</body>
+</table>
+<a href="/empform"><button>Add Employee</button></a>
+</center>
+{% endblock %}

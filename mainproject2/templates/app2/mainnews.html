@@ -1,0 +1,31 @@
+{% extends 'app2/home.html' %}
+{% csrf_token %}
+
+{% block body_block %}
+<center>
+	<a href="/empform"><button>Add Employee</button></a>
+<a href="/emptable"><button>View Employee Data</button></a>
+<a href="/mainnews"><button>Latest News</button></a>
+<a href="/vct"><button>Calender</button></a>
+
+<table border=7;>
+<head>
+	
+	<thead>
+			<th>Latest News</th>
+		</thead>
+
+</head>
+<body>
+		{% for s in news %}
+		<tr>
+			<td>{{s.occation}}</td>
+			
+		</tr>
+		{% endfor %}
+
+</body>
+</table>
+<a href="/newsform"><button>Add News</button></a>
+</center>
+{% endblock %}

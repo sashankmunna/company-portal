@@ -1,0 +1,14 @@
+{% extends 'app2/home.html' %}
+{% csrf_token %}
+
+{% block body_block %}
+{% csrf_token %}
+<center>
+
+<h2>Select Your Option Here</h2>
+<a href="/empform"><button>Add Employee</button></a>
+<a href="/emptable"><button>View Employee Data</button></a>
+<a href="/mainnews"><button>Latest News</button></a>
+<a href="/vct"><button>Calender</button></a>
+</center>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'app2/home.html' %}
+
+{% block body_block %}
+<center>
+<body>
+	<form method="POST">
+		{{cal.as_p}}
+		{%csrf_token%}
+
+		<a href="/vct"><button>submit</button></a>
+
+	</form>
+
+</body>
+</center>
+{% endblock %}
